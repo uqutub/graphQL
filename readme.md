@@ -15,4 +15,4 @@
 > [Github GraphQL API Documentation](https://docs.github.com/en/graphql/overview/about-the-graphql-api)
 > [Github GraphQL Playground/Explorer](https://docs.github.com/en/graphql/overview/explorer)
 	
-> **Book:** [The Road to GraphQL by Robin Wieruch](https://bit.ly/3ijGMDQ) (Chapters 1-8)
+> **Book:** [The Road to GraphQL by Robin Wieruch](https://bit.ly/3ijGMDQ) (Chapters 1-7)
