@@ -1,5 +1,4 @@
 import { useEffect } from 'react'
-import logo from './logo.svg';
 import './App.css';
 
 import { useQuery, gql } from '@apollo/client'
@@ -25,28 +24,22 @@ function App() {
   //     console.log('Error on Create User....')
   //   }
   // }
-  
+
   const { error, loading, data } = useQuery(LOAD_USERS)
   useEffect(() => {
     console.log('dataaaa', data)
   }, [data])
 
+
+  if (loading) {
+    return (<h1>Loading......</h1>)
+  }
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <pre>
+        {JSON.stringify(data)}
+      </pre>
     </div>
   );
 }

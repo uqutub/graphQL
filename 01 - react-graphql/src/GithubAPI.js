@@ -14,16 +14,16 @@ function GithubAPI() {
     useEffect(() => {
 
         // Immediately Invoked Function Expression - IIFE
-        (async() => {
-            const {data: user} = await api.get('/users/uqutub')
+        (async () => {
+            const { data: user } = await api.get('/users/uqutub')
             console.log('user ', user)
-            setUserData(user);
+            setUserData(user);      // update state of the userData
 
-            const {data: repo} = await api.get('/users/uqutub/repos')
+            const { data: repo } = await api.get('/users/uqutub/repos')
             console.log('repos: ', repo)
-            setUserRepos(repo);
+            setUserRepos(repo);     // update state of the userRepos
         })()
-        
+
     }, [])
 
     return (

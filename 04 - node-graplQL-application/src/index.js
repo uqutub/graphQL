@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import { createServer } from "http";
 import express from "express";
 import { execute, subscribe } from "graphql";
@@ -7,7 +8,7 @@ import { SubscriptionServer } from "subscriptions-transport-ws";
 import { makeExecutableSchema } from "@graphql-tools/schema";
 import { typeDefs, resolvers } from './Schema'
 
-const PORT = 4000;
+const PORT = process.env.PORT;
 const app = express();
 const httpServer = createServer(app);
 const schema = makeExecutableSchema({ typeDefs, resolvers });
