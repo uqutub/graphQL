@@ -10,14 +10,18 @@ function GithubAPI() {
     const [userData, setUserData] = useState(null)
     const [userRepos, setUserRepos] = useState(null)
 
+    // componentDidMount
     useEffect(() => {
 
+        // Immediately Invoked Function Expression - IIFE
         (async() => {
-            const user = await api.get('/users/uqutub')
-            setUserData(user.data);
+            const {data: user} = await api.get('/users/uqutub')
+            console.log('user ', user)
+            setUserData(user);
 
-            const repo = await api.get('/users/uqutub/repos')
-            setUserRepos(repo.data);
+            const {data: repo} = await api.get('/users/uqutub/repos')
+            console.log('repos: ', repo)
+            setUserRepos(repo);
         })()
         
     }, [])
