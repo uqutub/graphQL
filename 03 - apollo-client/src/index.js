@@ -3,33 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
-
-import {
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider,
-  HttpLink,
-  from
-} from "@apollo/client"
-import { onError } from '@apollo/client/link/error'
-
-const errorLink = onError(({ graphqlErrors, networkErrors }) => {
-  if (graphqlErrors) {
-    graphqlErrors.map(({ message, location, path }) => {
-      alert('GraphQL Error: ' + message);
-    });
-  }
-})
-const link = from([
-  errorLink,
-  new HttpLink({ uri: "http://localhost:4000/specialUrl" })
-])
-
-const client = new ApolloClient({
-  cache: new InMemoryCache(),
-  link
-})
+import { ApolloProvider, client } from './GraphQL/index'
 
 ReactDOM.render(
   <React.StrictMode>
