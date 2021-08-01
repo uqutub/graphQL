@@ -8,7 +8,7 @@ const api = axios.create({
     }
 });
 
-function GithubAPI() {
+function GithubGraphQl() {
 
     // const fetchData_js = async (organizationName) => {
     //     const QUERY_ORGANIZATION = `query {
@@ -64,7 +64,7 @@ function GithubAPI() {
 
     const addStart = async(repositoryId) => {
         const MUTATION_ADD_START = `mutation addStart($repositoryId: ID!) {
-            addStar(inout: {starrableId: $repositoryId}) {
+            addStar(input: {starrableId: $repositoryId}) {
                 starrable {
                     viewerHasStarred
                 }
@@ -76,7 +76,7 @@ function GithubAPI() {
     }
 
     useEffect(() => {
-        fetchData_ql("qutbITech")
+        addStart("MDEwOlJlcG9zaXRvcnkzODc1MTIzNjA=")
     }, [])
 
 
@@ -88,4 +88,4 @@ function GithubAPI() {
     );
 }
 
-export default GithubAPI;
+export default GithubGraphQl;
