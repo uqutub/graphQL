@@ -16,3 +16,11 @@
 > [Github GraphQL Playground/Explorer](https://docs.github.com/en/graphql/overview/explorer)
 	
 > **Book:** [The Road to GraphQL by Robin Wieruch](https://bit.ly/3ijGMDQ) (Chapters 1-7)
+
+
+
+
+
+
+<!-- Pagniation Implemented -->
+https://github.com/antstackio/graphql-pagination/tree/master/api

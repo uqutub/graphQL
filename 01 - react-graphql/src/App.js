@@ -1,12 +1,12 @@
 import './App.css';
-import GithubAPI from './GithubAPI';
-// import GithubGraphQL from './GithubGraphQL'
+// import GithubAPI from './GithubAPI';
+import GithubGraphQL from './GithubGraphQL'
 
 function App() {
   return (
     <div className="App">
-      <GithubAPI />
-      {/* <GithubGraphQL /> */}
+      {/* <GithubAPI /> */}
+      <GithubGraphQL />
     </div>
   );
 }

@@ -17,12 +17,17 @@ export const resolvers = {
         deleteUser(parent, args) {
             const deletedUser = users.find(({ name }) => name == args.name)
             console.log(deletedUser)
+            // delete user logic from an Array <users>
+            pubsub.publish('TRIGGER_DELETED_USER', { deletedUser });
             return deletedUser
         }
     },
     Subscription: {
         newUser: {
             subscribe: () => pubsub.asyncIterator(['TRIGGER_NEW_USER'])
+        },
+        deletedUser: {
+            subscribe: () => pubsub.asyncIterator(['TRIGGER_DELETED_USER'])
         }
     }
 
