@@ -11,7 +11,7 @@ import {
 } from "@apollo/client"
 
 const wsLink = new WebSocketLink({
-    uri: 'ws://localhost:4000/graphql',
+    uri: process.env.REACT_APP_GRAPHQL_WS_URI,
     options: {
         reconnect: true,
         // connectionParams: {
@@ -21,7 +21,7 @@ const wsLink = new WebSocketLink({
 });
 
 const httpLink = new HttpLink({
-    uri: 'http://localhost:4000/graphql'
+    uri: process.env.REACT_APP_GRAPHQL_URI
 });
 
 // https://www.apollographql.com/docs/react/data/error-handling/
