@@ -8,7 +8,7 @@ const api = axios.create({
     }
 });
 
-function GithubAPI() {
+function GithubGraphQl() {
 
     // const fetchData_js = async (organizationName) => {
     //     const QUERY_ORGANIZATION = `query {
@@ -100,4 +100,4 @@ function GithubAPI() {
     );
 }
 
-export default GithubAPI;
+export default GithubGraphQl;

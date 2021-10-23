@@ -5,8 +5,8 @@ import GithubGraphQL from './GithubGraphQL'
 function App() {
   return (
     <div className="App">
-      {/* <GithubAPI /> */}
-      <GithubGraphQL />
+      {/*<GithubAPI />*/}
+       <GithubGraphQL />
     </div>
   );
 }
